@@ -12,11 +12,20 @@ public class App {
         Employee employee = new Employee();
 
         System.out.printf("Name: ");
-    
+        employee.name = sc.nextLine();
+
         System.out.printf("Gross salary: ");
-        
+        employee.grossSalary = sc.nextDouble();
+
         System.out.printf("Tax: ");
-        
+        employee.tax = sc.nextDouble();
+
+        System.out.printf("\nEmployee:  %s, $ %.2f\n", employee.name, employee.netSalary());
+
+        System.out.printf("\nWhitch percentage to increase salaty? ");
+        employee.increseSalary(sc.nextDouble());
+
+        System.out.printf("\nUpdated data: %s, $ %.2f\n", employee.name, employee.netSalary());
 
         sc.close();
     }
